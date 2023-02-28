@@ -6,28 +6,31 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ShortFormVideoView: View {
     
     @State var currentVideo = ""
+    
+    @State var videos = MediaFileJSON.map { item -> Video in
+        let url = Bundle.main.path(forResource: item.url, ofType: "mp4") ?? ""
+        
+        let player = AVPlayer(url : URL(filePath: url))
+        
+        return Video(player: player, mediaFile: item)
+    }
     
     var body: some View {
         VStack(spacing : 0) {
             GeometryReader { proxy in
                 let size = proxy.size
                 TabView(selection: $currentVideo) {
-                    ForEach(MediaFileJSON) { media in
-                        VStack {
-                            Text(media.title)
-                            
-                            Spacer()
-                            
-                            Text("Hi")
-                                .frame(maxWidth : .infinity, alignment: .leading)
-                        }
-                        .frame(width : size.width)
-                        .padding()
-                        .rotationEffect(.init(degrees: -90))
+                    ForEach($videos) { $video in
+                        VideoPlayer(video: $video)
+                            .frame(width : size.width)
+                            .padding()
+                            .rotationEffect(.init(degrees: -90))
+                            .ignoresSafeArea(.all, edges: .top)
                     }
                 }
                 .rotationEffect(.init(degrees: 90))
@@ -35,6 +38,8 @@ struct ShortFormVideoView: View {
                 .frame(width : size.width)
                 .tabViewStyle(.page(indexDisplayMode: .never))
             }
+            .ignoresSafeArea(.all, edges: .top)
+            .background(Color.black.ignoresSafeArea())
         }
     }
 }
