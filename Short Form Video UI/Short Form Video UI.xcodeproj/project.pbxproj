@@ -10,23 +10,22 @@
 		8C64C58E29AB4444002C7CE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C58D29AB4444002C7CE6 /* ContentView.swift */; };
 		8C64C59029AB4444002C7CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C58F29AB4444002C7CE6 /* Assets.xcassets */; };
 		8C64C59429AB4444002C7CE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C59329AB4444002C7CE6 /* Preview Assets.xcassets */; };
-		8C64C5A829AB8EE9002C7CE6 /* mountain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C59C29AB8EE9002C7CE6 /* mountain.mp4 */; };
-		8C64C5A929AB8EE9002C7CE6 /* surf.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C59D29AB8EE9002C7CE6 /* surf.mp4 */; };
-		8C64C5AA29AB8EE9002C7CE6 /* wormhole.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C59E29AB8EE9002C7CE6 /* wormhole.mp4 */; };
-		8C64C5AB29AB8EE9002C7CE6 /* bullfinch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C59F29AB8EE9002C7CE6 /* bullfinch.mp4 */; };
-		8C64C5AC29AB8EE9002C7CE6 /* lotus.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A029AB8EE9002C7CE6 /* lotus.mp4 */; };
-		8C64C5AD29AB8EE9002C7CE6 /* love.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A129AB8EE9002C7CE6 /* love.mp4 */; };
-		8C64C5AE29AB8EE9002C7CE6 /* flamingo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A229AB8EE9002C7CE6 /* flamingo.mp4 */; };
-		8C64C5AF29AB8EE9002C7CE6 /* lights.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A329AB8EE9002C7CE6 /* lights.mp4 */; };
-		8C64C5B029AB8EE9002C7CE6 /* cat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A429AB8EE9002C7CE6 /* cat.mp4 */; };
-		8C64C5B129AB8EE9002C7CE6 /* aurora.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A529AB8EE9002C7CE6 /* aurora.mp4 */; };
-		8C64C5B229AB8EE9002C7CE6 /* jellyfish.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A629AB8EE9002C7CE6 /* jellyfish.mp4 */; };
-		8C64C5B329AB8EE9002C7CE6 /* earth.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5A729AB8EE9002C7CE6 /* earth.mp4 */; };
 		8C64C5B529AB9082002C7CE6 /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C5B429AB9082002C7CE6 /* MediaFile.swift */; };
 		8C64C5B729AB90AC002C7CE6 /* ShortFormVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C5B629AB90AC002C7CE6 /* ShortFormVideoView.swift */; };
 		8C64C5BA29AE44F6002C7CE6 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C5B929AE44F6002C7CE6 /* VideoPlayer.swift */; };
 		8C64C5BC29AE457A002C7CE6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C5BB29AE457A002C7CE6 /* Video.swift */; };
 		8C64C5BE29AE4675002C7CE6 /* CustomPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C5BD29AE4675002C7CE6 /* CustomPlayer.swift */; };
+		8C64C5FB29AE51AC002C7CE6 /* cave.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F029AE51A7002C7CE6 /* cave.mp4 */; };
+		8C64C5FC29AE51AC002C7CE6 /* laser.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F129AE51A8002C7CE6 /* laser.mp4 */; };
+		8C64C5FD29AE51AC002C7CE6 /* firework.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F229AE51A8002C7CE6 /* firework.mp4 */; };
+		8C64C5FE29AE51AC002C7CE6 /* galaxy2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F329AE51A8002C7CE6 /* galaxy2.mp4 */; };
+		8C64C5FF29AE51AC002C7CE6 /* universe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F429AE51A9002C7CE6 /* universe.mp4 */; };
+		8C64C60029AE51AC002C7CE6 /* plasma-ball.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F529AE51A9002C7CE6 /* plasma-ball.mp4 */; };
+		8C64C60129AE51AC002C7CE6 /* planets.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F629AE51A9002C7CE6 /* planets.mp4 */; };
+		8C64C60229AE51AC002C7CE6 /* star-field.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F729AE51AA002C7CE6 /* star-field.mp4 */; };
+		8C64C60329AE51AC002C7CE6 /* stars.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F829AE51AB002C7CE6 /* stars.mp4 */; };
+		8C64C60429AE51AC002C7CE6 /* galaxy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F929AE51AB002C7CE6 /* galaxy.mp4 */; };
+		8C64C60529AE51AC002C7CE6 /* sun.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5FA29AE51AC002C7CE6 /* sun.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,23 +34,22 @@
 		8C64C58F29AB4444002C7CE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C64C59129AB4444002C7CE6 /* Short_Form_Video_UI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Short_Form_Video_UI.entitlements; sourceTree = "<group>"; };
 		8C64C59329AB4444002C7CE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8C64C59C29AB8EE9002C7CE6 /* mountain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mountain.mp4; path = ../../../../../../Downloads/mountain.mp4; sourceTree = "<group>"; };
-		8C64C59D29AB8EE9002C7CE6 /* surf.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = surf.mp4; path = ../../../../../../Downloads/surf.mp4; sourceTree = "<group>"; };
-		8C64C59E29AB8EE9002C7CE6 /* wormhole.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = wormhole.mp4; path = ../../../../../../Downloads/wormhole.mp4; sourceTree = "<group>"; };
-		8C64C59F29AB8EE9002C7CE6 /* bullfinch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = bullfinch.mp4; path = ../../../../../../Downloads/bullfinch.mp4; sourceTree = "<group>"; };
-		8C64C5A029AB8EE9002C7CE6 /* lotus.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = lotus.mp4; path = ../../../../../../Downloads/lotus.mp4; sourceTree = "<group>"; };
-		8C64C5A129AB8EE9002C7CE6 /* love.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = love.mp4; path = ../../../../../../Downloads/love.mp4; sourceTree = "<group>"; };
-		8C64C5A229AB8EE9002C7CE6 /* flamingo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = flamingo.mp4; path = ../../../../../../Downloads/flamingo.mp4; sourceTree = "<group>"; };
-		8C64C5A329AB8EE9002C7CE6 /* lights.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = lights.mp4; path = ../../../../../../Downloads/lights.mp4; sourceTree = "<group>"; };
-		8C64C5A429AB8EE9002C7CE6 /* cat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = cat.mp4; path = ../../../../../../Downloads/cat.mp4; sourceTree = "<group>"; };
-		8C64C5A529AB8EE9002C7CE6 /* aurora.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = aurora.mp4; path = ../../../../../../Downloads/aurora.mp4; sourceTree = "<group>"; };
-		8C64C5A629AB8EE9002C7CE6 /* jellyfish.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = jellyfish.mp4; path = ../../../../../../Downloads/jellyfish.mp4; sourceTree = "<group>"; };
-		8C64C5A729AB8EE9002C7CE6 /* earth.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = earth.mp4; path = ../../../../../../Downloads/earth.mp4; sourceTree = "<group>"; };
 		8C64C5B429AB9082002C7CE6 /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
 		8C64C5B629AB90AC002C7CE6 /* ShortFormVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortFormVideoView.swift; sourceTree = "<group>"; };
 		8C64C5B929AE44F6002C7CE6 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		8C64C5BB29AE457A002C7CE6 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		8C64C5BD29AE4675002C7CE6 /* CustomPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayer.swift; sourceTree = "<group>"; };
+		8C64C5F029AE51A7002C7CE6 /* cave.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cave.mp4; sourceTree = "<group>"; };
+		8C64C5F129AE51A8002C7CE6 /* laser.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = laser.mp4; sourceTree = "<group>"; };
+		8C64C5F229AE51A8002C7CE6 /* firework.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = firework.mp4; sourceTree = "<group>"; };
+		8C64C5F329AE51A8002C7CE6 /* galaxy2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy2.mp4; sourceTree = "<group>"; };
+		8C64C5F429AE51A9002C7CE6 /* universe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = universe.mp4; sourceTree = "<group>"; };
+		8C64C5F529AE51A9002C7CE6 /* plasma-ball.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "plasma-ball.mp4"; sourceTree = "<group>"; };
+		8C64C5F629AE51A9002C7CE6 /* planets.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = planets.mp4; sourceTree = "<group>"; };
+		8C64C5F729AE51AA002C7CE6 /* star-field.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "star-field.mp4"; sourceTree = "<group>"; };
+		8C64C5F829AE51AB002C7CE6 /* stars.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = stars.mp4; sourceTree = "<group>"; };
+		8C64C5F929AE51AB002C7CE6 /* galaxy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy.mp4; sourceTree = "<group>"; };
+		8C64C5FA29AE51AC002C7CE6 /* sun.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sun.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,18 +102,17 @@
 		8C64C59A29AB8EBC002C7CE6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8C64C5A529AB8EE9002C7CE6 /* aurora.mp4 */,
-				8C64C59F29AB8EE9002C7CE6 /* bullfinch.mp4 */,
-				8C64C5A429AB8EE9002C7CE6 /* cat.mp4 */,
-				8C64C5A729AB8EE9002C7CE6 /* earth.mp4 */,
-				8C64C5A229AB8EE9002C7CE6 /* flamingo.mp4 */,
-				8C64C5A629AB8EE9002C7CE6 /* jellyfish.mp4 */,
-				8C64C5A329AB8EE9002C7CE6 /* lights.mp4 */,
-				8C64C5A029AB8EE9002C7CE6 /* lotus.mp4 */,
-				8C64C5A129AB8EE9002C7CE6 /* love.mp4 */,
-				8C64C59C29AB8EE9002C7CE6 /* mountain.mp4 */,
-				8C64C59D29AB8EE9002C7CE6 /* surf.mp4 */,
-				8C64C59E29AB8EE9002C7CE6 /* wormhole.mp4 */,
+				8C64C5F029AE51A7002C7CE6 /* cave.mp4 */,
+				8C64C5F229AE51A8002C7CE6 /* firework.mp4 */,
+				8C64C5F929AE51AB002C7CE6 /* galaxy.mp4 */,
+				8C64C5F329AE51A8002C7CE6 /* galaxy2.mp4 */,
+				8C64C5F129AE51A8002C7CE6 /* laser.mp4 */,
+				8C64C5F629AE51A9002C7CE6 /* planets.mp4 */,
+				8C64C5F529AE51A9002C7CE6 /* plasma-ball.mp4 */,
+				8C64C5F729AE51AA002C7CE6 /* star-field.mp4 */,
+				8C64C5F829AE51AB002C7CE6 /* stars.mp4 */,
+				8C64C5FA29AE51AC002C7CE6 /* sun.mp4 */,
+				8C64C5F429AE51A9002C7CE6 /* universe.mp4 */,
 				8C64C5B429AB9082002C7CE6 /* MediaFile.swift */,
 				8C64C5BB29AE457A002C7CE6 /* Video.swift */,
 			);
@@ -191,20 +188,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C64C60229AE51AC002C7CE6 /* star-field.mp4 in Resources */,
+				8C64C5FE29AE51AC002C7CE6 /* galaxy2.mp4 in Resources */,
 				8C64C59429AB4444002C7CE6 /* Preview Assets.xcassets in Resources */,
-				8C64C5AB29AB8EE9002C7CE6 /* bullfinch.mp4 in Resources */,
-				8C64C5B329AB8EE9002C7CE6 /* earth.mp4 in Resources */,
+				8C64C60429AE51AC002C7CE6 /* galaxy.mp4 in Resources */,
+				8C64C60129AE51AC002C7CE6 /* planets.mp4 in Resources */,
+				8C64C5FB29AE51AC002C7CE6 /* cave.mp4 in Resources */,
+				8C64C60529AE51AC002C7CE6 /* sun.mp4 in Resources */,
+				8C64C60329AE51AC002C7CE6 /* stars.mp4 in Resources */,
 				8C64C59029AB4444002C7CE6 /* Assets.xcassets in Resources */,
-				8C64C5B229AB8EE9002C7CE6 /* jellyfish.mp4 in Resources */,
-				8C64C5B129AB8EE9002C7CE6 /* aurora.mp4 in Resources */,
-				8C64C5A829AB8EE9002C7CE6 /* mountain.mp4 in Resources */,
-				8C64C5AC29AB8EE9002C7CE6 /* lotus.mp4 in Resources */,
-				8C64C5AD29AB8EE9002C7CE6 /* love.mp4 in Resources */,
-				8C64C5AF29AB8EE9002C7CE6 /* lights.mp4 in Resources */,
-				8C64C5A929AB8EE9002C7CE6 /* surf.mp4 in Resources */,
-				8C64C5AA29AB8EE9002C7CE6 /* wormhole.mp4 in Resources */,
-				8C64C5AE29AB8EE9002C7CE6 /* flamingo.mp4 in Resources */,
-				8C64C5B029AB8EE9002C7CE6 /* cat.mp4 in Resources */,
+				8C64C60029AE51AC002C7CE6 /* plasma-ball.mp4 in Resources */,
+				8C64C5FF29AE51AC002C7CE6 /* universe.mp4 in Resources */,
+				8C64C5FD29AE51AC002C7CE6 /* firework.mp4 in Resources */,
+				8C64C5FC29AE51AC002C7CE6 /* laser.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

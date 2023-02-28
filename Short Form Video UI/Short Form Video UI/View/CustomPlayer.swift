@@ -11,13 +11,13 @@ import AVKit
 struct CustomPlayer: UIViewControllerRepresentable {
     var player : AVPlayer
     
-    func makeUIViewController(context: Context) -> some AVPlayerViewController {
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
         let controller = AVPlayerViewController()
         
         controller.player = player
         controller.showsPlaybackControls = false
         
-        controller.videoGravity = .resizeAspectFill
+        controller.videoGravity = .resize
         
         return controller
     }

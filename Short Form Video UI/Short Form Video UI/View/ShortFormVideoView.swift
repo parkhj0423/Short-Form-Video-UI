@@ -28,9 +28,8 @@ struct ShortFormVideoView: View {
                     ForEach($videos) { $video in
                         VideoPlayer(video: $video)
                             .frame(width : size.width)
-                            .padding()
                             .rotationEffect(.init(degrees: -90))
-                            .ignoresSafeArea(.all, edges: .top)
+                            .ignoresSafeArea(.all)
                     }
                 }
                 .rotationEffect(.init(degrees: 90))
@@ -38,7 +37,7 @@ struct ShortFormVideoView: View {
                 .frame(width : size.width)
                 .tabViewStyle(.page(indexDisplayMode: .never))
             }
-            .ignoresSafeArea(.all, edges: .top)
+            .ignoresSafeArea(.all)
             .background(Color.black.ignoresSafeArea())
         }
     }
