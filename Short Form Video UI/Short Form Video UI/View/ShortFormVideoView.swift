@@ -26,10 +26,11 @@ struct ShortFormVideoView: View {
                 let size = proxy.size
                 TabView(selection: $currentVideo) {
                     ForEach($videos) { $video in
-                        VideoPlayer(video: $video)
+                        VideoPlayer(video: $video, currentVideo: $currentVideo)
                             .frame(width : size.width)
                             .rotationEffect(.init(degrees: -90))
                             .ignoresSafeArea(.all)
+                            .tag(video.id)
                     }
                 }
                 .rotationEffect(.init(degrees: 90))
@@ -39,6 +40,9 @@ struct ShortFormVideoView: View {
             }
             .ignoresSafeArea(.all)
             .background(Color.black.ignoresSafeArea())
+            .onAppear {
+                currentVideo = videos.first?.id ?? ""
+            }
         }
     }
 }

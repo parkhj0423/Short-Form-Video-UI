@@ -11,26 +11,75 @@ import AVFoundation
 struct VideoPlayer: View {
     
     @Binding var video : Video
+    @Binding var currentVideo : String
     
     @State private var showMore : Bool = false
+    
+    @State private var isPaused : Bool = false
+    @State private var pauseAnimation : Bool = false
     
     var body: some View {
         ZStack(alignment : .bottom) {
             if let player = video.player {
                 CustomPlayer(player: player)
-                
+                                
                 videoInfoView()
             }
         }
-        .onAppear {
-            video.player?.play()
+        .overlay {
+            autoPlayCalculater()
         }
-        .onDisappear {
-            video.player?.pause()
+        .onTapGesture {
+            onVideoTap()
+        }
+        .overlay {
+            centerPlayAndPauseIcon()
         }
     }
     
+    private func autoPlayCalculater() -> some View {
+        GeometryReader { proxy -> Color in
+            
+            let minY = proxy.frame(in: .global).minY
+            
+            let size = proxy.size
+            
+            DispatchQueue.main.async {
+                if -minY < (size.height / 2) && minY < (size.height / 2) && currentVideo == video.id && !isPaused {
+                    video.player?.play()
+                } else {
+                    video.player?.pause()
+                }
+            }
+            
+            return Color.clear
+        }
+    }
     
+    private func videoControlView() -> some View {
+        Color.black
+            .frame(width: 150, height: 150)
+            .opacity(0.01)
+            .onTapGesture {
+                if pauseAnimation {
+                    return
+                }
+                
+                isPaused.toggle()
+                withAnimation {
+                    pauseAnimation.toggle()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                    withAnimation {
+                        pauseAnimation.toggle()
+                    }
+                }
+            }
+    }
+    
+    
+    @ViewBuilder
     private func videoInfoView() -> some View {
         VStack {
             
@@ -48,6 +97,9 @@ struct VideoPlayer: View {
         .padding(.horizontal)
         .padding(.bottom, 40)
         .frame(maxHeight : .infinity, alignment: .bottom)
+        
+        
+        
     }
     
     private func descriptionView() -> some View {
@@ -155,6 +207,45 @@ struct VideoPlayer: View {
         }
         .font(.caption2)
     }
+    
+    private func centerPlayAndPauseIcon() -> some View {
+        Image(systemName: isPaused ? "pause.fill" : "play.fill")
+            .font(.title)
+            .foregroundColor(.white)
+            .padding()
+            .background(.secondary)
+            .clipShape(Circle())
+            .foregroundStyle(.black)
+            .opacity(pauseAnimation ? 1 : 0)
+    }
+    
+    private func onVideoTap() {
+        if pauseAnimation {
+            return
+        }
+        
+        if isPaused {
+            video.player?.play()
+        } else {
+            video.player?.pause()
+        }
+        
+        // Show Icon
+        isPaused.toggle()
+        withAnimation {
+            pauseAnimation.toggle()
+        }
+        
+        
+        // Hide Icon after 0.8 sec
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            withAnimation {
+                pauseAnimation.toggle()
+            }
+        }
+    }
+    
+    
 }
 
 struct VideoPlayer_Previews: PreviewProvider {
@@ -163,7 +254,7 @@ struct VideoPlayer_Previews: PreviewProvider {
         
         let mediaFile = MediaFile(url: "sun", title: "Sun", description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.")
         
-        VideoPlayer(video: .constant(Video(player : player, mediaFile: mediaFile)))
+        VideoPlayer(video: .constant(Video(player : player, mediaFile: mediaFile)), currentVideo: .constant("sun"))
     }
 }
 
