@@ -26,6 +26,7 @@
 		8C64C60329AE51AC002C7CE6 /* stars.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F829AE51AB002C7CE6 /* stars.mp4 */; };
 		8C64C60429AE51AC002C7CE6 /* galaxy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5F929AE51AB002C7CE6 /* galaxy.mp4 */; };
 		8C64C60529AE51AC002C7CE6 /* sun.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8C64C5FA29AE51AC002C7CE6 /* sun.mp4 */; };
+		8C64C60929B23C17002C7CE6 /* CustomBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C60829B23C17002C7CE6 /* CustomBottomSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		8C64C5F829AE51AB002C7CE6 /* stars.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = stars.mp4; sourceTree = "<group>"; };
 		8C64C5F929AE51AB002C7CE6 /* galaxy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy.mp4; sourceTree = "<group>"; };
 		8C64C5FA29AE51AC002C7CE6 /* sun.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sun.mp4; sourceTree = "<group>"; };
+		8C64C60829B23C17002C7CE6 /* CustomBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				8C64C5B629AB90AC002C7CE6 /* ShortFormVideoView.swift */,
 				8C64C5B929AE44F6002C7CE6 /* VideoPlayer.swift */,
 				8C64C5BD29AE4675002C7CE6 /* CustomPlayer.swift */,
+				8C64C60829B23C17002C7CE6 /* CustomBottomSheet.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				8C64C5B529AB9082002C7CE6 /* MediaFile.swift in Sources */,
 				8C64C5BC29AE457A002C7CE6 /* Video.swift in Sources */,
 				8C64C5BE29AE4675002C7CE6 /* CustomPlayer.swift in Sources */,
+				8C64C60929B23C17002C7CE6 /* CustomBottomSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
