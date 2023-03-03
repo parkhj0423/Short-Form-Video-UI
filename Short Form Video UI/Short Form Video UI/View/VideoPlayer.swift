@@ -18,12 +18,19 @@ struct VideoPlayer: View {
     @State private var isPaused : Bool = false
     @State private var pauseAnimation : Bool = false
     
+    @State private var showSheet: Bool = false
+    
     var body: some View {
         ZStack(alignment : .bottom) {
             if let player = video.player {
                 CustomPlayer(player: player)
                                 
                 videoInfoView()
+            }
+        }
+        .overlay {
+            CustomBottomSheet(showSheet: $showSheet) {
+                CommentListView()
             }
         }
         .overlay {
@@ -187,7 +194,7 @@ struct VideoPlayer: View {
             
             VStack {
                 Button {
-                    
+                    self.showSheet = true
                 } label: {
                     Image(systemName: "text.bubble.fill")
                         .resizable()
