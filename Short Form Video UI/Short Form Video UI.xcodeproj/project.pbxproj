@@ -30,6 +30,9 @@
 		8C64C62429B26FA9002C7CE6 /* CustomBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C62129B26FA9002C7CE6 /* CustomBottomSheet.swift */; };
 		8C64C62529B26FA9002C7CE6 /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C61F29B26FA9002C7CE6 /* CommentListView.swift */; };
 		8C64C62629B26FA9002C7CE6 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C62229B26FA9002C7CE6 /* CustomCorner.swift */; };
+		8C64C62A29B3A09E002C7CE6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C62929B3A09E002C7CE6 /* UIApplication.swift */; };
+		8C64C62D29B3A217002C7CE6 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C62C29B3A217002C7CE6 /* ViewModifier.swift */; };
+		8C64C62F29B3A22D002C7CE6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64C62E29B3A22D002C7CE6 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		8C64C62029B26FA9002C7CE6 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		8C64C62129B26FA9002C7CE6 /* CustomBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheet.swift; sourceTree = "<group>"; };
 		8C64C62229B26FA9002C7CE6 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		8C64C62929B3A09E002C7CE6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		8C64C62C29B3A217002C7CE6 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		8C64C62E29B3A22D002C7CE6 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,8 @@
 		8C64C58A29AB4444002C7CE6 /* Short Form Video UI */ = {
 			isa = PBXGroup;
 			children = (
+				8C64C62B29B3A204002C7CE6 /* ViewModifier */,
+				8C64C62829B3A093002C7CE6 /* extension */,
 				8C64C5B829AB90BC002C7CE6 /* View */,
 				8C64C59A29AB8EBC002C7CE6 /* Resources */,
 				8C64C58F29AB4444002C7CE6 /* Assets.xcassets */,
@@ -148,6 +156,23 @@
 				8C64C62229B26FA9002C7CE6 /* CustomCorner.swift */,
 			);
 			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		8C64C62829B3A093002C7CE6 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				8C64C62929B3A09E002C7CE6 /* UIApplication.swift */,
+				8C64C62E29B3A22D002C7CE6 /* View.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		8C64C62B29B3A204002C7CE6 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				8C64C62C29B3A217002C7CE6 /* ViewModifier.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,12 +256,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C64C62F29B3A22D002C7CE6 /* View.swift in Sources */,
 				8C64C5BA29AE44F6002C7CE6 /* VideoPlayer.swift in Sources */,
 				8C64C62629B26FA9002C7CE6 /* CustomCorner.swift in Sources */,
 				8C64C62529B26FA9002C7CE6 /* CommentListView.swift in Sources */,
+				8C64C62A29B3A09E002C7CE6 /* UIApplication.swift in Sources */,
 				8C64C62329B26FA9002C7CE6 /* BlurView.swift in Sources */,
 				8C64C5B729AB90AC002C7CE6 /* ShortFormVideoView.swift in Sources */,
 				8C64C62429B26FA9002C7CE6 /* CustomBottomSheet.swift in Sources */,
+				8C64C62D29B3A217002C7CE6 /* ViewModifier.swift in Sources */,
 				8C64C58E29AB4444002C7CE6 /* ContentView.swift in Sources */,
 				8C64C5B529AB9082002C7CE6 /* MediaFile.swift in Sources */,
 				8C64C5BC29AE457A002C7CE6 /* Video.swift in Sources */,

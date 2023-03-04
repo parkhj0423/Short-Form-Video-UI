@@ -12,9 +12,8 @@ struct CustomBottomSheet<Content : View>: View {
     @Binding var showSheet : Bool
     var content : () -> Content
     
-    @State private var bottomSheetHeight : CGFloat = 100
-    @State private var offset : CGFloat = 0
-    @State private var lastOffset : CGFloat = 0
+    @State private var offset : CGFloat = UIScreen.main.bounds.height / 2
+    @State private var lastOffset : CGFloat = UIScreen.main.bounds.height / 2
     @GestureState private var gestureOffset : CGFloat = 0
     
     var body: some View {
@@ -39,9 +38,7 @@ struct CustomBottomSheet<Content : View>: View {
                         }
                         
                     }
-                        .offset(y : height - bottomSheetHeight)
-                    // CustomBottomSheet의 하단 부분이 bounce 되지 않게 구현
-                        .offset(y : -offset > 0 ? -offset <= (height - bottomSheetHeight) ? offset : -(height - bottomSheetHeight) : 0)
+                        .offset(y : offset)
                         .gesture(
                             DragGesture()
                                 .updating($gestureOffset) { value, out, _ in
@@ -49,23 +46,21 @@ struct CustomBottomSheet<Content : View>: View {
                                     onGestureChanged()
                                 }
                                 .onEnded { value in
-                                    
-                                    let maxHeight = height - bottomSheetHeight
-                                    
                                     withAnimation {
-                                        // 전체 height의 2/3 높이 (maxHeight / 3) * 2
-                                        if -offset > bottomSheetHeight && -offset < (maxHeight / 2) {
+                                        /// offset이 0 일 경우 최대 사이즈
+                                        if lastOffset < offset && offset < (height / 2)  {
                                             // 중간 사이즈
-                                            offset = -(maxHeight / 2)
-                                        } else if -offset > (maxHeight / 2) {
-                                            print("큰")
-                                            // 큰 사이즈
-                                            offset = -maxHeight + bottomSheetHeight
-                                        } else {
+                                            offset = (height / 2)
+                                        } else if offset < (height / 2) {
+                                            // 최대 사이즈
+                                            // safeArea만큼의 offset
+                                            offset = getSafeAreaTop()
+                                        } else if offset > (height / 2) {
+                                            // 중간 사이즈 보다 offset이 클 경우 sheet을 내림
+                                            resetOnDismiss()
                                             self.showSheet = false
                                         }
                                     }
-                                    
                                     
                                     // 마지막 offset 저장
                                     lastOffset = offset
@@ -78,20 +73,7 @@ struct CustomBottomSheet<Content : View>: View {
             .ignoresSafeArea(edges: .bottom)
         }
     }
-    
-//    private func backgroundImageView() -> some View {
-//        GeometryReader { proxy in
-//            let frame = proxy.frame(in: .global)
-//            
-//            Image("JamesWeb")
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-//                .frame(width: frame.width, height: frame.height, alignment: .center)
-//        }
-//        .blur(radius: getBlurRadius())
-//        .ignoresSafeArea()
-//    }
-//    
+
     private func headerView() -> some View {
         VStack {
             HStack {
@@ -130,14 +112,33 @@ struct CustomBottomSheet<Content : View>: View {
     
     private func onGestureChanged() {
         DispatchQueue.main.async {
+            if gestureOffset + lastOffset < 0 {
+                return
+            }
             self.offset = gestureOffset + lastOffset
         }
     }
     
-    private func getBlurRadius() -> CGFloat {
-        let progress = -offset / (UIScreen.main.bounds.height - bottomSheetHeight)
-        return progress * 30
+    private func resetOnDismiss() {
+        DispatchQueue.main.async {
+            withAnimation {
+                self.offset = UIScreen.main.bounds.height / 2
+                self.lastOffset = UIScreen.main.bounds.height / 2
+            }
+        }
     }
+    
+    func getSafeAreaTop() -> CGFloat {
+        let keyWindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        
+        return keyWindow?.safeAreaInsets.top ?? 0
+    }
+
 }
 
 struct CustomBottomSheet_Previews: PreviewProvider {

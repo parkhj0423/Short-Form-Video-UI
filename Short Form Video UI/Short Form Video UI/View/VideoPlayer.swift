@@ -28,10 +28,8 @@ struct VideoPlayer: View {
                 videoInfoView()
             }
         }
-        .overlay {
-            CustomBottomSheet(showSheet: $showSheet) {
-                CommentListView()
-            }
+        .showBottomSheet(showSheet: $showSheet) {
+            CommentListView()
         }
         .overlay {
             autoPlayCalculater()
@@ -227,7 +225,7 @@ struct VideoPlayer: View {
     }
     
     private func onVideoTap() {
-        if pauseAnimation {
+        if pauseAnimation || showSheet {
             return
         }
         

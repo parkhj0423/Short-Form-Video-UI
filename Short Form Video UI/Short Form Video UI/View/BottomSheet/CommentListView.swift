@@ -13,6 +13,7 @@ struct CommentListView: View {
             ForEach(0..<20) { _ in
                 CommtentRowView()
             }
+            Spacer(minLength: UIScreen.main.bounds.height / 2)
         }
         
         .frame(maxWidth: .infinity)
